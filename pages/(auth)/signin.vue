@@ -34,7 +34,7 @@ function toggleTheme() {
           <label for="password">Пароль</label>
           <Password
             v-model="password"
-            id="password"
+            inputId="password"
              :feedback="false"
             toggleMask
           />
@@ -55,39 +55,7 @@ function toggleTheme() {
         </div>
       </form>
 
-      <Button
-        @click="toggleTheme"
-        label="Сменить тему"
-      />
-      <Button label="Primary" />
-      <Button
-        label="Secondary"
-        severity="secondary"
-      />
-      <Button
-        label="Success"
-        severity="success"
-      />
-      <Button
-        label="Info"
-        severity="info"
-      />
-      <Button
-        label="Warn"
-        severity="warn"
-      />
-      <Button
-        label="Help"
-        severity="help"
-      />
-      <Button
-        label="Danger"
-        severity="danger"
-      />
-      <Button
-        label="Contrast"
-        severity="contrast"
-      />
+     
     </section>
   </div>
 </template>
@@ -126,6 +94,10 @@ function toggleTheme() {
 
       label {
         font-weight: 600;
+      }
+
+      .p-password-input {
+        width: 100%;
       }
     }
   }
