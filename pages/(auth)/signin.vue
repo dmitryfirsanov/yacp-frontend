@@ -1,6 +1,10 @@
 <script setup lang="ts">
 const email = ref('');
 const password = ref('');
+
+function toggleTheme() {
+  document.documentElement.classList.toggle('dark-mode');
+}
 </script>
 
 <template>
@@ -28,10 +32,11 @@ const password = ref('');
         </div>
         <div class="auth-page__form-field">
           <label for="password">Пароль</label>
-          <InputText
-            id="password"
+          <Password
             v-model="password"
-            placeholder="Пароль"
+            id="password"
+             :feedback="false"
+            toggleMask
           />
         </div>
         <div class="auth-page__buttons">
@@ -40,12 +45,49 @@ const password = ref('');
             as="router-link"
             to="/signup"
             severity="secondary"
+            label="Создать аккаунт"
             text
-            >Создать аккаунт</Button
-          >
-          <Button class="auth-page__button">Вход</Button>
+          />
+          <Button
+            class="auth-page__button"
+            label="Вход"
+          />
         </div>
       </form>
+
+      <Button
+        @click="toggleTheme"
+        label="Сменить тему"
+      />
+      <Button label="Primary" />
+      <Button
+        label="Secondary"
+        severity="secondary"
+      />
+      <Button
+        label="Success"
+        severity="success"
+      />
+      <Button
+        label="Info"
+        severity="info"
+      />
+      <Button
+        label="Warn"
+        severity="warn"
+      />
+      <Button
+        label="Help"
+        severity="help"
+      />
+      <Button
+        label="Danger"
+        severity="danger"
+      />
+      <Button
+        label="Contrast"
+        severity="contrast"
+      />
     </section>
   </div>
 </template>

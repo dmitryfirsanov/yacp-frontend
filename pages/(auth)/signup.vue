@@ -28,10 +28,11 @@ const password = ref('');
         </div>
         <div class="auth-page__form-field">
           <label for="password">Пароль</label>
-          <InputText
-            id="password"
+          <Password
             v-model="password"
-            placeholder="Пароль"
+            id="password"
+            :feedback="false"
+            toggleMask
           />
         </div>
         <div class="auth-page__buttons">

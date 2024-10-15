@@ -2,9 +2,17 @@
 @import 'fonts.css';
 @import 'primeicons/primeicons.css';
 
+:root {
+  --body-bg: var(--p-surface-0);
+}
+
+:root[class="dark-mode"] {
+  --body-bg: var(--p-surface-900);
+}
 
 body {
   font-family: Inter;
+  background-color: var(--body-bg);
 }
 
 a {
