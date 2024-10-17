@@ -17,7 +17,7 @@
   padding: 0 6rem;
 
   &__content {
-    flex: 1 0 auto;
+    flex-grow: 1;
   }
 }
 </style>
